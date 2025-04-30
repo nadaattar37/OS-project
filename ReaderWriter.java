@@ -53,7 +53,6 @@ static class Writer extends Thread {
                 waitingWriters++;
                 System.out.println(Thread.currentThread().getName() + " is writing.");
                 sharedData++;
-                Thread.sleep(500);
                 System.out.println(Thread.currentThread().getName() + " is done writing. Data: " + sharedData);
                 waitingWriters--;
                 writemutex.release();
